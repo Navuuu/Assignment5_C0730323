@@ -8,38 +8,50 @@ namespace Assignment5_C0730323
 {
     class Program
     {
-       
-      
 
-            string[] Letters = new string[26] {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "1",
-                                                                              "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+        //Ravneet kaur
 
-            public static void Main()
+        static void Main(string[] args)
+        {
+            Program a = new Program();
+            Console.WriteLine("the longest word is :");
+            Console.WriteLine(a.MyFunctionA("Ada Lovelace wrote the first algorithm designed processing by an Analytical Engine."));
+        }
+
+        private bool MyFunctionA(string v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public MyFunctionA(string input)
+        {
+            //Write a C# program to find the longest word in a string.
+            string[] words = input.Split(' ');
+
+            int wordArrayLength = words.Length;
+            int[] wordsLength = new int[wordArrayLength];
+
+            foreach (var word in words)
             {
-
-                Program orange = new Program();
-                Console.WriteLine(orange.Gematria("universe"));
-            //
-                Console.ReadLine();
+                //TODO
             }
+            //loop post condition: we now have array wordsLength which
+            //contains the lengths of each word
 
-            public int Gematria(string word)
+            string currentWord = words[0];
+            string nextWord;
+
+            for (int y = 0; y < words.Length - 1; y++)
             {
-
-                int GematriaValue = 0;
-                for (int i = 0; i < word.Length; i++)
-                { GematriaValue += LetterValue(word[i].ToString()); }
-                return GematriaValue;
-            }
-
-            public int LetterValue(string letter)
-            {
-                int x = 0;
-                while (Letters[x] != letter)
-                {
-                    if (Letters[x++] == letter) return -1;
-                }
-                return x + 1;
+                currentWord = words[y];
+                nextWord = words[y + 1];
+                //TODO: Use an IF Statement to make sure that variable longestWord
+                // is always set to the Longest Word in th input string
             }
         }
+
+        public Program()
+        {
+        }
     }
+}
